@@ -1,0 +1,17 @@
+from tkinter import*
+import calendar
+def show_calender():
+    year=int(year_field.get())
+    cal_content=calendar.calendar(year)
+    cal_year.config(text=cal_content)
+root=Tk()
+root.title("Calender GUI")
+root.geometry("500x500")
+year_label=Label(root,text="Enter year")
+year_label.pack()
+year_field=Entry(root)
+year_field.pack()
+show_button=Button(root,text="show calender",command=show_calender)
+show_button.pack()
+cal_year=Label(root,text="",font="Consolas 10 bold")
+cal_year.pack()
